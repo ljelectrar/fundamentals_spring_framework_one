@@ -9,7 +9,7 @@ public class GameRunner {
 	}
 
 	public void run() {
-
+		System.out.println("Gaming is runnig " + game);
 	}
 
 }
