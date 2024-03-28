@@ -1,14 +1,6 @@
 package com.ljelectrar.game;
 
-public class SuperContraGame {
-	/*
-	 * Logic of a videoGame Console
-	 *  -------------       
-	 * | _|_   O  H  |
-	 * |  |     X  A |
-	 *  -------------       
-	 *         
-	 * */
+public class SuperContraGame implements GameConsole {
 	
 	public void up() {
 		
@@ -19,11 +11,22 @@ public class SuperContraGame {
 		System.out.println("Sit down");
 	}
 	
-	public void lef() {
+	public void left() {
 		System.out.println("Go back...");
 	}
 	
 	public void right() {
 		System.out.println("Shoot a bullet");
+	}
+	
+	public void printConsole() {
+		System.out.println(""
+				+ "\r\n"
+				+ "	 Logic of a videoGame Console\r\n"
+				+ "	  -------------       \r\n"
+				+ "	 | _|_   O  H  |\r\n"
+				+ "	 |  |     X  A |\r\n"
+				+ "	  -------------       \r\n"
+				+ "	         \r\n");
 	}
 }

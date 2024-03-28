@@ -12,8 +12,9 @@ public class GameRunner {
 		System.out.println("Super Contra is running...");
 		superContraGame.up();
 		superContraGame.down();
-		superContraGame.lef();
+		superContraGame.left();
 		superContraGame.right();
+		superContraGame.printConsole();
 	}
 
 }
