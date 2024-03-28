@@ -9,5 +9,4 @@ public class WorkHardWithSpringFundamentalsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WorkHardWithSpringFundamentalsApplication.class, args);
 	}
-
 }
