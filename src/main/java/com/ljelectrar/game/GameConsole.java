@@ -10,9 +10,9 @@ public interface GameConsole {
 	 *  -------------       
 	 *         
 	 * */
-	void printConsole();
 	void up();
 	void down();
 	void left();
 	void right();
+	void printConsole();
 }

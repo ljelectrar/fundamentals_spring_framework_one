@@ -2,8 +2,9 @@ package com.ljelectrar.game;
 
 public class SuperContraGame implements GameConsole {
 	
+	private String name;
+	
 	public void up() {
-		
 		System.out.println("up");
 	}
 	

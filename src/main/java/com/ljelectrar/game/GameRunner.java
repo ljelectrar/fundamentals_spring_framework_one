@@ -2,19 +2,18 @@ package com.ljelectrar.game;
 
 public class GameRunner {
 
-	SuperContraGame superContraGame;
+	GameConsole game;
 
-	public GameRunner(SuperContraGame superContraGame) {
-		this.superContraGame = superContraGame;
+	public GameRunner(GameConsole game) {
+		this.game = game;
 	}
-	
+
 	public void run() {
-		System.out.println("Super Contra is running...");
-		superContraGame.up();
-		superContraGame.down();
-		superContraGame.left();
-		superContraGame.right();
-		superContraGame.printConsole();
+		System.out.println("Gaming is running " + game);
+		game.printConsole();
+		game.up();
+		game.down();
+		game.left();
+		game.right();
 	}
-
 }
