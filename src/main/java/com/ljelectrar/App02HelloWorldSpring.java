@@ -11,10 +11,12 @@ public class App02HelloWorldSpring {
 		var context = 
 			new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 		
-		System.out.println(context.getBean("person_with_address"));
+		//System.out.println(context.getBean("person_with_address"));
 		
-		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		//Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 		
+		System.out.println(context.getBean(Person.class));
+		System.out.println(context.getBean(Address.class)); // Err because there is no a @Primary Annotation
 		
 		
 		

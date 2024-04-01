@@ -3,6 +3,7 @@ package com.ljelectrar;
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person (String name, int age) {};
 record Address (String city, String state) {};
@@ -12,6 +13,7 @@ record PersonWithAddress(String name, int age, Address adress) {};
 public class HelloWorldConfiguration {
 	
 	@Bean
+	@Primary
 	public Person person() {
 		return new Person("Leandro", 28);
 	}
@@ -40,6 +42,11 @@ public class HelloWorldConfiguration {
 	@Bean(name="Volta Redonda")
 	public Address address() {
 		return new Address("Volta Redonda", "Rio de Janeiro");
+	}
+	
+	@Bean(name="Barra Mansa")
+	public Address address2() {
+		return new Address("Barra Mansa", "Rio de Janeiro");
 	}
 	
 	@Bean
