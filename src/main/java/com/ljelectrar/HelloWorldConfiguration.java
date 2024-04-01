@@ -26,9 +26,19 @@ public class HelloWorldConfiguration {
 		return new Person(name(), age()); 
 	}
 	
-	@Bean
+	@Bean(name = "Person4")
+	public Person person4ParametersCall(String name, int age) {
+		return new Person(name, age);
+	}
+	
+	@Bean(name="Volta Redonda")
 	public Address address() {
 		return new Address("Volta Redonda", "Rio de Janeiro");
+	}
+	
+	@Bean(name="Barra Mansa")
+	public Address adress2() {
+		return new Address("Barra Mansa", "Rio de Janeiro");
 	}
 	
 	@Bean
