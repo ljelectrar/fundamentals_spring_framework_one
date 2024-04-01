@@ -20,6 +20,12 @@ public class HelloWorldConfiguration {
 		return new Person("Popaye", 28);
 	}
 	
+	@Bean(name="Person3")
+	public Person person3MethodCall() {
+		// return from HelloWorldConfiguration.cass, methods: name() and age(), that are @Beans ;)
+		return new Person(name(), age()); 
+	}
+	
 	@Bean
 	public Address address() {
 		return new Address("Volta Redonda", "Rio de Janeiro");
