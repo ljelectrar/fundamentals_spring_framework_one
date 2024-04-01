@@ -1,5 +1,7 @@
 package com.ljelectrar;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {
@@ -10,6 +12,13 @@ public class App02HelloWorldSpring {
 			new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 		
 		System.out.println(context.getBean("person_with_address"));
+		
+		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		
+		
+		
+		
+		
 		/*
 		System.out.println(context.getBean("name"));
 		System.out.println(context.getBean("age"));
