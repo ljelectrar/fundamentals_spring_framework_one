@@ -15,6 +15,11 @@ public class HelloWorldConfiguration {
 		return new Person("Leandro", 28);
 	}
 	
+	@Bean(name="Popaye")
+	public Person person2() {
+		return new Person("Popaye", 28);
+	}
+	
 	@Bean
 	public Address address() {
 		return new Address("Volta Redonda", "Rio de Janeiro");
