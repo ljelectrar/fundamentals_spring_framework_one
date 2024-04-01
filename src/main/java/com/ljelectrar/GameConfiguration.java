@@ -5,16 +5,19 @@ import org.springframework.context.annotation.Configuration;
 
 import com.ljelectrar.game.GameConsole;
 import com.ljelectrar.game.GameRunner;
-import com.ljelectrar.game.MarioGame;
 import com.ljelectrar.game.PacmanGame;
-import com.ljelectrar.game.SuperContraGame;
 
 @Configuration
 public class GameConfiguration {
 	
 	@Bean(name="Pacman")
-	public GameConsole gamePacman() {
+	public GameConsole game() {
 		return new PacmanGame();
+	}
+	
+	@Bean
+	public GameRunner gameRunner() {
+		return new GameRunner(game()); 
 	}
 	
 	/*
