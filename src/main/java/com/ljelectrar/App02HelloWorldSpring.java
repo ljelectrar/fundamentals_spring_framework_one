@@ -16,7 +16,7 @@ public class App02HelloWorldSpring {
 		//Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 		
 		System.out.println(context.getBean(Person.class));
-		System.out.println(context.getBean(Address.class)); // Err because there is no a @Primary Annotation
+		System.out.println(context.getBean(Address.class));
 		
 		
 		

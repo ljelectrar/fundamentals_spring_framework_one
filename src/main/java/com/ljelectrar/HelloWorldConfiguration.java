@@ -40,6 +40,7 @@ public class HelloWorldConfiguration {
 	}
 	
 	@Bean(name="Volta Redonda")
+	@Primary
 	public Address address() {
 		return new Address("Volta Redonda", "Rio de Janeiro");
 	}
