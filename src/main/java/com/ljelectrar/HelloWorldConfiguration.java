@@ -1,10 +1,18 @@
 package com.ljelectrar;
 
 import org.springframework.context.annotation.Bean;
+
 import org.springframework.context.annotation.Configuration;
+
+record Person (String name, int age) {};
 
 @Configuration
 public class HelloWorldConfiguration {
+	
+	@Bean
+	public Person person() {
+		var person = new Person("Leandro", 28);
+	}
 	
 	@Bean
 	public String name() {
