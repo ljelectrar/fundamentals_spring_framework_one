@@ -15,7 +15,7 @@ public class App01GamingBasicJava {
 		
 		try (var context = new AnnotationConfigApplicationContext(GameConfiguration.class)) {
 			
-			System.out.println(context.getBean(GameConsole.class).up());
+			context.getBean(GameConsole.class).up();
 			
 		} catch (BeansException e) {
 			e.printStackTrace();

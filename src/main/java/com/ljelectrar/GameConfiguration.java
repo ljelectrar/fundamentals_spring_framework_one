@@ -17,6 +17,7 @@ public class GameConfiguration {
 		return new PacmanGame();
 	}
 	
+	/*
 	@Bean(name="Super Contra")
 	public GameConsole gameSuperContra() {
 		return new SuperContraGame();
@@ -26,4 +27,5 @@ public class GameConfiguration {
 	public GameConsole gameMario() {
 		return new MarioGame();
 	}
+	*/
 }
