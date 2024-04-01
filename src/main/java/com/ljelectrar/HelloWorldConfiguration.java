@@ -1,7 +1,7 @@
 package com.ljelectrar;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
@@ -35,7 +35,7 @@ public class HelloWorldConfiguration {
 	}
 	
 	@Bean(name="person_with_address")
-	public PersonWithAddress personWithAddress(String name, int age, Address address) {
+	public PersonWithAddress personWithAddress(String name, int age, @Qualifier("Barra Mansa") Address address) {
 		return new PersonWithAddress(name, age, address);
 	}
 	
@@ -46,6 +46,7 @@ public class HelloWorldConfiguration {
 	}
 	
 	@Bean(name="Barra Mansa")
+	@Qualifier("Barra Mansa")
 	public Address address2() {
 		return new Address("Barra Mansa", "Rio de Janeiro");
 	}
