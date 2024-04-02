@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 @Primary
 public class SuperContraGame implements GameConsole {
 	
-	private String name;
-	
 	public void up() {
 		System.out.println("up");
 	}

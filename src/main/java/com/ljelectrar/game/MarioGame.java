@@ -6,9 +6,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Qualifier("MarioGameQualifier")
 public class MarioGame implements GameConsole {
-	
-	private String name;
-	
 
 	public void up() {
 		System.out.println("Juuump");
