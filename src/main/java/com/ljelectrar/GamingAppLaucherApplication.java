@@ -14,7 +14,7 @@ import com.ljelectrar.game.SuperContraGame;
 
 @Configuration
 @ComponentScan("com.ljelectrar.game")
-public class App01GamingBasicJava {
+public class GamingAppLaucherApplication {
 
 	@Bean
 	public GameRunner gameRunner(GameConsole game) {
@@ -24,7 +24,7 @@ public class App01GamingBasicJava {
 
 	public static void main(String[] args) {
 
-		try (var context = new AnnotationConfigApplicationContext(App01GamingBasicJava.class)) {
+		try (var context = new AnnotationConfigApplicationContext(GamingAppLaucherApplication.class)) {
 			context.getBean(GameConsole.class).up();
 			context.getBean(GameRunner.class).run();
 
