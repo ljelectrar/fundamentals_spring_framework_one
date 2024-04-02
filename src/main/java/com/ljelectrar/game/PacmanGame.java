@@ -1,5 +1,8 @@
 package com.ljelectrar.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacmanGame implements GameConsole {
 
 	@Override
