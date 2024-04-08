@@ -14,13 +14,22 @@ import org.springframework.stereotype.Component;
  * */
 @Component
 class MyBusinessDependencyClass {
-	
-	@Autowired
+
 	DependencyOne dependencyOne;
+	DependencyTwo dependencyTwo;
+
+	@Autowired
+	public void setDependencyOne(DependencyOne dependencyOne) {
+		System.out.println("Setter Injection - DependencyOne");
+		this.dependencyOne = dependencyOne;
+	}
 	
 	@Autowired
-	DependencyTwo dependencyTwo;
-	
+	public void setDependencyTwo(DependencyTwo dependencyTwo) {
+		System.out.println("Setter Injection - DependencyTwo");
+		this.dependencyTwo = dependencyTwo;
+	}
+
 	public String toString() {
 		return "Using dependency " + dependencyOne + "\n and \n" + dependencyTwo;
 	}
@@ -28,14 +37,13 @@ class MyBusinessDependencyClass {
 
 @Component
 class DependencyOne {
-	
+
 }
 
 @Component
 class DependencyTwo {
-	
-}
 
+}
 
 @Configuration
 @ComponentScan
@@ -44,11 +52,11 @@ public class DependencyInjectionLaucherApplication {
 	public static void main(String[] args) {
 
 		try (var context = new AnnotationConfigApplicationContext(DependencyInjectionLaucherApplication.class)) {
-			
+
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
-			
+
 			System.out.println(context.getBean(MyBusinessDependencyClass.class));
-			
+
 		} catch (BeansException e) {
 			e.printStackTrace();
 		}
