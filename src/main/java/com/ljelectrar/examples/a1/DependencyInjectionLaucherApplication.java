@@ -18,17 +18,22 @@ class MyBusinessDependencyClass {
 	DependencyOne dependencyOne;
 	DependencyTwo dependencyTwo;
 
-	@Autowired
-	public void setDependencyOne(DependencyOne dependencyOne) {
-		System.out.println("Setter Injection - DependencyOne");
+	@Autowired // this annotation is not mandatory
+	public MyBusinessDependencyClass(DependencyOne dependencyOne, DependencyTwo dependencyTwo) {
+		System.out.println("Constructor Injection - MyBusinessDependencyClass \n");
 		this.dependencyOne = dependencyOne;
-	}
-	
-	@Autowired
-	public void setDependencyTwo(DependencyTwo dependencyTwo) {
-		System.out.println("Setter Injection - DependencyTwo");
 		this.dependencyTwo = dependencyTwo;
 	}
+
+	/*
+	 * @Autowired public void setDependencyOne(DependencyOne dependencyOne) {
+	 * System.out.println("Setter Injection - DependencyOne"); this.dependencyOne =
+	 * dependencyOne; }
+	 * 
+	 * @Autowired public void setDependencyTwo(DependencyTwo dependencyTwo) {
+	 * System.out.println("Setter Injection - DependencyTwo"); this.dependencyTwo =
+	 * dependencyTwo; }
+	 */
 
 	public String toString() {
 		return "Using dependency " + dependencyOne + "\n and \n" + dependencyTwo;
