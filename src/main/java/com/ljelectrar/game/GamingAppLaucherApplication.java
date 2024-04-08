@@ -1,16 +1,10 @@
-package com.ljelectrar;
+package com.ljelectrar.game;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import com.ljelectrar.game.GameConsole;
-import com.ljelectrar.game.GameRunner;
-import com.ljelectrar.game.MarioGame;
-import com.ljelectrar.game.PacmanGame;
-import com.ljelectrar.game.SuperContraGame;
 
 @Configuration
 @ComponentScan("com.ljelectrar.game")
